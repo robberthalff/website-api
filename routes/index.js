@@ -5,7 +5,7 @@ const _api = require('./api')
 
 // Setup Route Bindings
 module.exports = function (app) {
-  const {middleware: { api: mapi }} = keystone
+  const mapi = keystone.middleware.api;
   ;['Post', 'PostCategory', 'PostCategory', 'Gallery', 'Thing'].forEach((modelName) => {
     const api = _api(modelName)
     const path = '/api/' + camelcase(modelName)
