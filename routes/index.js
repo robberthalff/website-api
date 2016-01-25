@@ -6,6 +6,9 @@ const _api = require('./api')
 // Setup Route Bindings
 module.exports = function (app) {
   const mapi = keystone.middleware.api;
+
+  app.all('/api/*', keystone.middleware.cors)
+
   ;['Post', 'PostCategory', 'PostCategory', 'Gallery', 'Thing'].forEach((modelName) => {
     const api = _api(modelName)
     const path = '/api/' + camelcase(modelName)
@@ -15,8 +18,6 @@ module.exports = function (app) {
     app.all(`${path}/:id/update`, mapi, api.update)
     app.get(`${path}/:id/remove`, mapi, api.remove)
   })
-
-  app.all('/api*', keystone.middleware.cors);
 
   app.use(function (req, res) {
     res.render('index')
