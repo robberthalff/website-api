@@ -16,6 +16,8 @@ module.exports = function (app) {
     app.get(`${path}/:id/remove`, mapi, api.remove)
   })
 
+  app.all('/api*', keystone.middleware.cors);
+
   app.use(function (req, res) {
     res.render('index')
   })
