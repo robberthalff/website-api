@@ -1,7 +1,7 @@
 // api
 // See: https://gist.github.com/JedWatson/9741171
 const keystone = require('keystone')
-const scope = require('../lib/scope')
+const scope = require('../lib/scope').scope
 
 /**
  *
