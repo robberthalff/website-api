@@ -2,6 +2,18 @@
 // See: https://gist.github.com/JedWatson/9741171
 const keystone = require('keystone')
 
+/**
+ *
+ * TODO: integrate these into the API:
+ *
+ * https://github.com/keystonejs/keystone-demo/blob/master/routes/views/blog.js
+ *
+ * So pagination and filtering for all.
+ *
+ * @param modelName
+ * @returns {{list: list, get: get, create: create, update: update, remove: remove}}
+ */
+
 module.exports = function (modelName) {
   const Model = keystone.list(modelName).model
 
