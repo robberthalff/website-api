@@ -1,4 +1,8 @@
-var keystone = require('keystone')
+const keystone = require('keystone')
+const favicon = require('express-favicon')
+const express = require('express')
+//const mongoose = require('mongoose')
+//const app = express()
 
 keystone.init({
   'name': 'RobbertHalff',
@@ -19,6 +23,14 @@ keystone.init({
 })
 
 keystone.import('models')
+
+const app = keystone.get('app')
+app.use(favicon(__dirname + '/favicon.ico'));
+
+/*
+keystone.set('app', app)
+keystone.set('mongoose', mongoose)
+*/
 
 keystone.set('locals', {
   _: require('underscore'),

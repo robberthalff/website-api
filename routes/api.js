@@ -1,6 +1,7 @@
 // api
 // See: https://gist.github.com/JedWatson/9741171
 const keystone = require('keystone')
+const scope = require('../lib/scope')
 
 /**
  *
@@ -21,7 +22,7 @@ module.exports = function (modelName) {
    * List
    */
   function list (req, res) {
-    Model.find(function (err, items) {
+    Model.find(scope(Model), function (err, items) {
       if (err) return res.apiError('database error', err)
       res.apiResponse(items)
     })
