@@ -22,7 +22,8 @@
     "npm": ">=1.3.14"
   },
   "scripts": {
-    "start": "node keystone.js"
+    "start": "node keystone.js",
+    "watch": "nodemon keystone.js"
   },
   "main": "keystone.js",
   "devDependencies": {
