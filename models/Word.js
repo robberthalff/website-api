@@ -2,6 +2,8 @@ const keystone = require('keystone')
 const Types = keystone.Field.Types
 
 const Word = new keystone.List('Word', {
+  singular: 'Word',
+  plural: 'Words',
   autokey: {
     from: 'EN',
     path: 'key',
@@ -28,7 +30,7 @@ Word.add({
   level: {
     type: Types.Select,
     options: 'difficult, hard, easy',
-    default: 'normal',
+    default: 'easy',
     index: true
   },
   status: {
