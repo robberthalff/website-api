@@ -9,7 +9,15 @@ module.exports = function (app) {
 
   app.all('/api/*', keystone.middleware.cors)
 
-  ;['Post', 'PostCategory', 'PostCategory', 'Gallery', 'Thing'].forEach((modelName) => {
+  ;[
+    'Post',
+    'PostCategory',
+    'PostCategory',
+    'Gallery',
+    'Thing',
+    'Word',
+    'WordCategory'
+  ].forEach((modelName) => {
     const api = _api(modelName)
     const path = '/api/' + camelcase(modelName)
     app.get(path, mapi, api.list)
