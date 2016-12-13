@@ -3,20 +3,20 @@ const Types = keystone.Field.Types
 
 const Word = new keystone.List('Word', {
   autokey: {
-    from: 'en',
+    from: 'EN',
     path: 'key',
     unique: true
   }
 })
 
 Word.add({
-  en: {
+  EN: {
     type: String
   },
-  id: {
+  ID: {
     type: String
   },
-  nl: {
+  NL: {
     type: String
   },
   priority: {
@@ -49,7 +49,7 @@ Word.add({
 })
 
 Word.schema.virtual('words').get(function () {
-  return [this.en, this.id, this.nl]
+  return [this.EN, this.ID, this.NL]
 })
 
 Word.schema.statics.defaultScope = {
@@ -57,5 +57,5 @@ Word.schema.statics.defaultScope = {
 }
 
 Word.track = true
-Word.defaultColumns = 'id, en, nl'
+Word.defaultColumns = 'ID, EN, NL'
 Word.register()
