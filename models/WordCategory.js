@@ -1,9 +1,9 @@
-var keystone = require('keystone')
+const keystone = require('keystone')
 // var Types = keystone.Field.Types
 
-var WordCategory = new keystone.List('WordCategory', {
+const WordCategory = new keystone.List('WordCategory', {
   autokey: { from: 'name', path: 'key', unique: true },
-  label: 'Categories'
+  label: 'WordCategories'
 })
 
 WordCategory.add({
