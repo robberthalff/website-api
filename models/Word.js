@@ -58,10 +58,6 @@ Word.schema.virtual('words').get(function () {
   return [this.en_EN, this.id_ID, this.nl_NL]
 })
 
-Word.schema.statics.defaultScope = {
-  state: 'tolearn'
-}
-
 Word.track = true
 Word.defaultColumns = 'id_ID, en_EN, nl_NL, categories'
 Word.register()
