@@ -11,16 +11,13 @@ const Word = new keystone.List('Word', {
 
 Word.add({
   en: {
-    type: String,
-    required: true
+    type: String
   },
   id: {
-    type: String,
-    required: true
+    type: String
   },
   nl: {
-    type: String,
-    required: true
+    type: String
   },
   priority: {
     type: Types.Select,
