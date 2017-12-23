@@ -1,4 +1,4 @@
-FROM node:5.5-slim
+FROM node:latest
 
 ENV IP 0.0.0.0
 ENV PORT 3000
