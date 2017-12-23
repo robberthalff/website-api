@@ -1,7 +1,7 @@
-var keystone = require('keystone')
-var Types = keystone.Field.Types
+const keystone = require('keystone')
+const Types = keystone.Field.Types
 
-var PostComment = new keystone.List('PostComment', {
+const PostComment = new keystone.List('PostComment', {
   label: 'Comments'
 })
 

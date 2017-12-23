@@ -1,8 +1,8 @@
-var keystone = require('keystone')
-var transform = require('model-transform')
-var Types = keystone.Field.Types
+const keystone = require('keystone')
+const transform = require('model-transform')
+const Types = keystone.Field.Types
 
-var User = new keystone.List('User')
+const User = new keystone.List('User')
 
 User.add({
   name: { type: Types.Name, required: true, index: true },

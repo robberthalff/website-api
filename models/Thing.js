@@ -1,7 +1,7 @@
-var keystone = require('keystone')
-var Types = keystone.Field.Types
+const keystone = require('keystone')
+const Types = keystone.Field.Types
 
-var Thing = new keystone.List('Thing', {
+const Thing = new keystone.List('Thing', {
   label: 'All Fields',
   singular: 'Thing',
   plural: 'Things',

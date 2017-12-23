@@ -1,5 +1,5 @@
 exports.create = {
   User: [
-    { 'name.full': 'Admin User', email: 'user@keystonejs.com', password: 'admin', isAdmin: true }
+    { 'name.full': 'Robbert Halff', email: 'rob.halff@gmail.com', password: 'admin', isAdmin: true }
   ]
 }

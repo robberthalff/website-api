@@ -3,7 +3,6 @@ const keystone = require('keystone')
 const camelcase = require('camelcase')
 const _api = require('./api')
 
-// Setup Route Bindings
 module.exports = function (app) {
   const mapi = keystone.middleware.api
 
@@ -31,12 +30,3 @@ module.exports = function (app) {
     res.render('index')
   })
 }
-
-/*
- // Views
- app.get('/', routes.views.index)
- app.get('/blog/:category?', routes.views.blog)
- app.get('/blog/post/:post', routes.views.post)
- app.get('/gallery', routes.views.gallery)
- app.all('/contact', routes.views.contact)
- */
