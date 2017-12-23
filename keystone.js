@@ -1,6 +1,11 @@
-require('dotenv').config()
 const keystone = require('keystone')
-const routes = require('./routes')
+const routes = require('./src/routes')
+const _ = require('lodash')
+
+const {
+  COOKIE_SECRET = 'change_me',
+  CLOUDINARY_CONFIG = 'change_me_too'
+} = process.env;
 
 keystone.init({
   'name': 'RobbertHalff',
@@ -12,14 +17,14 @@ keystone.init({
   'session': true,
   'auth': true,
   'user model': 'User',
-  'cookie secret': 'd5036b4c254f48eee0ac3779928ac9fc20836ad44ece8aa44d629a89b7798027dd61be91ecb00351ca8a7fefae6ce562be4c142ad889e34f5a3895acf4e7ffa6',
-  'cloudinary config': 'cloudinary://631298377816735:LTDAYAIOtWav5xrfSfTJisL7a7A@rhalff'
+  'cookie secret': COOKIE_SECRET,
+  'cloudinary config': CLOUDINARY_CONFIG
 })
 
-keystone.import('models')
+keystone.import('./src/models')
 
 keystone.set('locals', {
-  _: require('lodash'),
+  _,
   env: keystone.get('env'),
   utils: keystone.utils,
   editable: keystone.content.editable
