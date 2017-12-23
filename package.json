@@ -1,6 +1,6 @@
 {
   "name": "robberthalff",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "babel-core": "^6.26.0",
@@ -26,7 +26,8 @@
   },
   "scripts": {
     "start": "node keystone.js",
-    "watch": "nodemon keystone.js"
+    "watch": "nodemon keystone.js",
+    "lint": "standard --fix"
   },
   "main": "keystone.js",
   "devDependencies": {

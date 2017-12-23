@@ -5,7 +5,7 @@ const _api = require('./api')
 
 // Setup Route Bindings
 module.exports = function (app) {
-  const mapi = keystone.middleware.api;
+  const mapi = keystone.middleware.api
 
   app.all('/api/*', keystone.middleware.cors)
 

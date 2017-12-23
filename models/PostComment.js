@@ -1,11 +1,6 @@
 var keystone = require('keystone')
 var Types = keystone.Field.Types
 
-/**
-	Posts
-	=====
- */
-
 var PostComment = new keystone.List('PostComment', {
   label: 'Comments'
 })

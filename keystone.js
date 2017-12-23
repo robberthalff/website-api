@@ -1,7 +1,6 @@
-require('dotenv').config();
+require('dotenv').config()
 const keystone = require('keystone')
-const favicon = require('express-favicon')
-const express = require('express')
+const routes = require('./routes')
 
 keystone.init({
   'name': 'RobbertHalff',
@@ -26,8 +25,8 @@ keystone.set('locals', {
   editable: keystone.content.editable
 })
 
-keystone.set('cors allow origin', true);
-keystone.set('routes', require('./routes'))
+keystone.set('cors allow origin', true)
+keystone.set('routes', routes)
 keystone.set('nav', {
   users: 'users',
   content: ['posts', 'post-categories', 'post-comments']

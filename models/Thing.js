@@ -29,16 +29,19 @@ Thing.add(
   }, 'Complex Fields', {
     select: { type: Types.Select, options: 'first, second, third', initial: true },
     indentedCheckbox: { type: Boolean, initial: true, indent: true, note: 'This checkbox is indented' },
-    customSelect: { type: Types.Select, options: [
+    customSelect: { type: Types.Select,
+      options: [
         { label: 'Option 1', value: 'one' },
         { label: 'Option 2', value: 'two' },
         { label: 'Option 3', value: 'three' }
-    ] },
-    numericSelect: { type: Types.Select, numeric: true, options: [
+      ] },
+    numericSelect: { type: Types.Select,
+      numeric: true,
+      options: [
         { label: 'Number 1', value: 1 },
         { label: 'Number 2', value: 2 },
         { label: 'Number 3', value: 3 }
-    ] },
+      ] },
     splitName: { type: Types.Name, initial: true },
     password: { type: Types.Password, initial: true },
     cloudinaryImage: { type: Types.CloudinaryImage },
@@ -49,10 +52,11 @@ Thing.add(
   // embedSrc: { type: String },
   // embedData: { type: Types.Embedly, from: 'embedSrc' },
   }, 'Dependent Fields', {
-    otherSelect: { type: Types.Select, options: [
+    otherSelect: { type: Types.Select,
+      options: [
       { label: 'Pre-defined Value', value: 'predefined' },
       { label: 'Other Value', value: 'other' }
-    ]},
+      ]},
     otherValue: { type: String, dependsOn: { otherSelect: 'other' } }
   }, 'Relationships', {
     user: { type: Types.Relationship, ref: 'User', initial: true },
